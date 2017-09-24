@@ -6,6 +6,7 @@
 3. Магазин.
 4. Страница товара.
 Использован HTML, CSS, нативный JavaScript для создания модальных окон.
+Демо: https://ostapenko25.github.io/Barbershop/
 
 Дизайн: HTMLAcademy.ru
 Верстка: Юлия Остапенко
