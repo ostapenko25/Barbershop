@@ -1,0 +1,931 @@
+﻿* {    
+    padding:0;
+    margin:0;
+}
+
+body {  
+    color:black;
+    font-family: 'PT Sans Narrow', arial;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: antiquewhite;
+    background-image: url(img/pattern.png);
+    background-repeat:repeat;  
+    
+    }
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.clr {
+    clear:both;
+}
+
+img { /*автосохранение пропорций картинок*/
+    max-width: 100%;
+    height: auto;
+}
+
+/*HEADER begin*/
+.main-header {
+    margin-bottom:60px;
+    background-color: black;
+    min-height: 70px;
+}
+
+.container {
+    width: 980px; /*ширина макета по крайним направляющим*/
+    padding: 0 10px; /*центровка содержимого браузера*/
+    margin:0 auto;
+}
+
+.logo-menu {
+    float:left;
+    width:124px;
+    padding-top: 26px;
+}
+
+.main-navigation .logo-menu a:hover {
+    border-bottom: none;
+}
+
+.main-navigation {
+    float:left;
+    width: 800px;
+    font-size: 16px;
+}
+
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navigation li {
+    display: inline-block;
+    margin-left:30px;    
+}
+
+.main-navigation ul li a,
+.user-block a {
+    display: block;
+    color:white;
+    text-decoration: none;
+}
+
+.main-navigation ul li a  {
+    padding: 25px 15px;       
+}
+
+.main-navigation ul li a:hover  {
+    background:#242424;
+    /* border-bottom:3px solid grey; */
+}
+
+
+.main-navigation .logo-menu {
+    width: 124px;
+    min-height: 17px;
+    padding-bottom:px;
+}
+
+.main-navigation .active {
+    position: relative;
+    background-color: none;
+}
+
+.main-navigation .active::after {
+    content: "";
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    left:15px;    
+    height: 5px;    
+    background-color: #ffffff;
+} 
+
+.user-block {
+    float:right;
+    max-width: 140px;
+    position: relative;
+        }
+
+.user-block a {
+    display: inline-block;
+    line-height: 20px;
+    vertical-align: top;
+    padding: 25px 20px 25px 50px;
+}
+
+.login:hover {
+    background:#242424;
+
+}
+
+.login::before {    /*иконка слева от кнопки входа*/
+    content: "";
+    position: absolute;
+    top: 28px;
+    left:20px;
+    width: 22px;
+    height: 22px;
+    background: black url("img/sprite.png") no-repeat;
+    background-position: -140px -5px;
+    opacity: 0.7;
+}
+
+.login:hover::before {  /*иконка слева от кнопки входа при наведении*/
+    opacity: 1;
+    background-color:#242424;
+}
+
+li .active {
+    
+}
+
+/*HEADER end*/
+
+.current h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.current li {
+    display: inline-block;
+    padding-right:30px;  
+}
+
+.current li:last-child {
+    color:#aca8a5;
+}
+
+.current li a {
+    display:block;
+    color:black;
+    text-decoration: none;    
+}
+
+.current ul {
+    margin-bottom: 50px;
+}
+
+/*catalog-filter begin*/
+
+.catalog-filter {
+    width: 210px;
+    
+}
+
+.catalog-filter h2 {
+    margin-bottom: 25px;
+} 
+
+.catalog-filter input {
+    margin-bottom: 15px;
+}
+
+.catalog-filter .btn {
+    margin-top:35px;
+}
+
+.catalog-brands form {
+    margin-bottom: 50px;
+}
+
+.button-catalog .btn {
+    padding: 10px 19px;
+}
+
+.item-buy a:hover {
+    background-color: #663d15;
+}
+
+.button-catalog .curr {
+    background-color:white;
+    color:black;
+}
+
+/*catalog-filter end*/
+
+
+/*checkbox begin*/
+
+input[type="checkbox"],
+input[type="radio"] 
+{
+    display:none;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin:5px 18px 10px 0;
+    vertical-align:middle;
+    background:url(img/chck-unchecked.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(img/chck-checked.png) left top no-repeat;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:20px;
+    height:20px;
+    margin:5px 18px 10px 0;
+    vertical-align:middle;
+    background:url(img/radio-unchecked.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(img/radio-checked.png) left top no-repeat;
+}
+/*checkbox end*/
+
+/*LOGO begin*/
+.index-logo {
+    width: 368px;
+    height: 204px;
+    margin:0 auto;
+    margin-bottom:25px;
+}
+/*LOGO end*/
+
+
+/*FEATURES begin*/
+.features-item {
+    float:left; 
+    color:white;
+    width: 300px;
+    margin-right:19px;
+    margin-bottom: 80px;
+    margin-left: 7px;
+    text-align: center;
+    
+}
+
+.features-item:last-child {
+    margin-right: 0;
+}
+
+ .features-item p {
+    margin:10px;
+    margin-bottom: 0;
+}
+
+.feature-name {
+    display: block;
+    position: relative; /*для позиционирования ромбика*/
+    font-size: 32px;
+    margin-bottom: 50px;
+    padding-bottom: 35px; /*отступ для ромбика*/
+    line-height: 42px;
+    text-align: center; 
+}
+
+.feature-name::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    bottom:0;
+    left:50%;
+    margin-left: -10px; 
+    transform: rotate(45deg); 
+}
+
+.feature-name-p {
+    padding-top:20px;
+    text-transform: uppercase;
+}
+/*FEATURES end*/
+
+
+/*NEAWS PHOTO begin*/
+.index-content {
+    padding:50px 70px 10px 70px; /*внутренние отступы для основного контейнера, содержащего две колонки*/ 
+    margin-bottom:35px;
+    min-height: 400px;
+    background-color: antiquewhite;
+    color:black;
+    background:
+        url(img/shadow.png) no-repeat center, /*вертикальная тень по центру блока*/
+        #f7f4f1 url(img/pattern.png); /*текстурка блока*/
+}
+
+.index-content-left {
+    width: 380px;
+    float:left;
+}
+
+.index-content-right {
+    width: 300px;
+    float:right;
+}
+
+.index-content-title {
+    font-size:30px;
+    line-height: 42px;
+    margin:0;
+    margin-bottom:25px; 
+}
+
+.index-content p {
+    margin:0;
+    margin-bottom:25px; 
+}
+
+.index-content-left p {
+    margin-bottom:30px;
+}
+
+.news-preview {
+    margin:0;
+    padding:0;
+    padding-right: 35px;
+    list-style: none;
+}
+
+.news-preview {
+    margin-bottom:32px;
+}
+
+.news-preview  li {
+    margin-bottom:30px;
+}
+
+.news-preview p {
+    margin-bottom: 10px;
+}
+
+.news-preview time {
+    font-weight: 400;
+    text-transform: none;
+}
+
+.gallery {
+    width: 286px;
+    height: 260px;
+    position: relative;
+    }
+
+.gallery-content {
+    margin: 0px;
+    height: 164px;
+    background-color: #cccccc;
+    border:3px solid #ffffff; 
+}
+
+.gallery-content img {
+    width: 286px;
+    height: 164px;    
+}
+
+.gallery .btn {
+    position: absolute;
+    bottom:0; 
+    width: 140px;
+    margin:0;
+}
+
+.gallery-prev {
+    left:0;
+}
+
+.gallery-next {
+    right:0;
+}
+/*NEAWS PHOTO end*/
+
+/*CONTACTS APPOINTMENT begin*/
+
+.appointment-form input {    /*стилизация полей формы*/
+float:left;
+    width: 106px;
+    margin-right: 20px;
+    margin-bottom:20px;
+    padding: 7px 15px;
+    font-size:14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color:black;
+    text-transform: uppercase;
+    background-color: #f9f6f3;
+    border: 2px solid black;
+    outline: none;
+   
+}
+
+.appointment-form input:nth-child(2n) {
+    margin-right: 0; /*сбросить отступы справа каждому второму полю формы, чтобы они влезли в блок при флоате*/
+}
+
+.appointment-form input:focus {
+    border:2px solid #663d15; /*наведение на поле ввода формы*/
+}
+
+.appointment-form .btn {
+    clear: both;
+    width: 100%;
+    margin-left:1px;
+}
+
+/*CONTACTS APPOINTMENT end*/
+
+/*CATALOG-ITEMS begin*/
+.catalog-items {
+  margin-bottom: -20px;
+}
+
+.item {
+    width: 220px;
+    height: auto;
+    padding: 10px;
+    float:left;
+    display:block;
+}
+
+.catalog-items {
+    overflow:hidden;   
+}
+
+.catalog-filter {
+    float:left;
+    }
+
+.button-catalog .btn {
+    text-align: left;
+    margin-top: 25px;
+    margin-right: 7px;   
+}
+
+.button-catalog .btn:first-child {
+    margin-left: 10px;}
+    
+/*CATALOG-ITEMS end*/
+
+
+/*PRICE_PAGE begin*/
+.price-content {
+    width: 940px;
+   }
+
+.price-content-left {
+    width: 450px;
+    float:left;
+}
+
+.price-content-right {
+    width: 450px;
+    float:right;   
+}
+
+.price-content-right p {
+     margin-top:-7px;  
+}
+
+.page-name li {
+    display: inline-block;
+    vertical-align: middle;
+    padding:0 8px;
+}
+
+.page-name span {
+    font-size:48px;
+}
+
+.page-name hr {
+    border: none; /* Убираем границу */
+    background-color: black; /* Цвет линии */
+    color: black; /* Цвет линии для IE6-7 */
+    height: 2px; /* Толщина линии */
+    width: 160px;
+
+}
+
+.price-content-left h2,
+.price-content-right h2
+{
+    font-size: 24px;
+    margin-top:20px;
+    margin-bottom: 1px;    
+}
+
+.list-use {
+    list-style: none;  
+    margin-bottom: 30px; 
+}
+
+.list-use li {
+    padding-top: 20px;
+}
+
+.price-content-right h2 {
+    margin-bottom: 25px;  
+}
+
+.price-table tr td {
+    width: 230px;
+    height: 40px;
+    border:3px solid black;  
+}
+
+.price-table tr td:first-child {
+    padding-left: 20px;
+    
+}
+
+.price-table tr td:last-child {
+    text-align: center;   
+}
+
+table {    
+    border-collapse: collapse;
+    margin-bottom:62px;
+}
+/*PRICE_PAGE end*/
+
+/* ITEM_PAGE begin*/
+.item-ds{
+    background-color: white;
+    padding: 15px 0 15px 15px;
+    margin-top:-15px;
+    
+}
+
+.item-content {
+    width: 940px;
+}
+
+.item-gallery {
+    width: 490px;
+    float:left;
+}
+
+.item-describe {
+    width: 390px;
+    float:left;
+    margin-left:59px;
+    margin-top:10px;
+    color:black;
+    text-transform: uppercase;
+}
+
+.item-ds .item-describe {
+    margin-left:0;
+}
+
+.item-describe-3 li,
+.list-use li {    /*маркер списка*/
+    list-style-image:url(img/list-mark.png);
+    margin-top:0px;
+    margin-left:15px;
+}
+
+.item a {
+    text-decoration: none;
+}
+
+.item-1  {
+	width: 140px;
+	height: 150px;
+	background: url(img/item-1-small.png) no-repeat; /*спрайтовая общая картинка*/
+	display: inline-block;
+	margin: 0 20px 0 0;
+}
+
+.item-1.img-2 {
+	background-position: 0 0; /*первая картинка - без сдвига*/
+}
+
+.item-1.img-3  {
+	background-position: -170px 0; /*вторая картинка - сдвиг фтовой картинки на 23px */
+}
+
+.item-1.img-4  {
+	background-position: -340px 0; /*вторая картинка - сдвиг фтовой картинки на 23px */
+}
+
+.item-describe-1,
+.item-describe-2,
+.item-describe-3
+{
+    margin-bottom: 30px;
+}
+
+.item-content .presence {
+    font-weight: 700;
+}
+
+.item-describe-1 .articul {
+    color:#aca8a5;
+    padding-left:150px;
+}
+
+.item-content p {
+    margin-top:35px;
+}
+
+.item-name {
+    display: block;    
+    text-transform: uppercase;
+    color:black;
+    margin-bottom:10px;
+}
+
+.item-price {
+    min-width: 55px;
+    display: inline-block;
+    padding: 12px 26px;
+    background-color: #e5e5e5;
+}
+
+.item-buy {
+    display: inline-block;
+    margin-left:-3px;
+    background-color: #000000;
+    color:white;
+}
+
+.item-buy a {
+    display: block;
+    padding: 12px 20px;
+    color:white;
+    text-decoration: none;  
+    }
+
+.item-describe-3 {
+    margin-top:50px;
+}
+
+.item-describe-3 li {
+    padding-top: 10px;
+}
+
+.item-describe-3 h2 {
+    margin-bottom:20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:white;
+    background-color: black;
+    font-weight: bold;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    padding: 12px 33px;
+    margin-left:-3px;
+    margin-right: 16px;
+    cursor: pointer;
+    border:none; /*убрать рамки кнопочных баттонов. которые зажаются по умолчанию*/
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #663d15;
+}
+
+.btn.disabled,
+.btn:disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.btn.disabled:hover,
+.btn:disabled:hover {
+    background-color: black;
+}
+
+
+/* ITEM_PAGE end*/
+
+/*FOOTER begin*/
+.main-footer {
+    min-height: 90px;
+    margin-top:65px;
+    padding: 60px 0 40px 0;    
+    background-color: #252525;    
+    color:white;
+}
+
+.footer-contacts {
+    width: 320px;    
+    float: left;  
+    margin-right: 60px;
+}
+
+.footer-contacts a {
+    color:white;
+}
+
+.footer-contacts a:hover {
+    text-decoration: none;
+}
+
+.footer-social {
+    max-width: 180px;    
+    float: left;  
+    text-align: center;
+}
+
+.footer-social p {
+    margin:0;
+    margin-bottom: 15px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 43px;
+    height: 43px;
+    margin: 0 2px;    
+    vertical-align: top;
+    font-size:0;
+    background: black url("img/sprite.png") no-repeat center;    
+}
+
+.social-btn-vk {
+    background-position: 10px 10px;
+}
+
+.social-btn-fb {
+    background-position: -40px 10px;
+}
+
+.social-btn-inst {
+    background-position: -90px 10px;
+}
+
+.social-btn:hover {
+    opacity: 0.8;   
+    background-color: #663d15;
+    }
+
+.footer-copyright {
+    width: 180px;    
+    float: right;    
+}
+
+.footer-copyright p {
+    margin:0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-copyright .btn {
+    margin-left: 25px;
+    text-align: center;
+    margin-bottom: 15px;
+    padding:10px 22px;
+}
+
+/*FOOTER end*/
+
+/*FORM begin*/
+
+.modal-content, 
+.modal-content-feedback {  /*окно формы*/
+    display:none;
+    position: fixed;
+    z-index:20;
+    top:120px;
+    left:50%;    
+    width: 300px;
+    margin-left: -230px;
+    padding: 50px 80px;    
+    color: #000000;    
+    background: #f8f3f0 url("img/pattern.png");
+    font-size:14px;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+
+.google-map { /*всплывающая карта*/    
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-top:-280px;
+    margin-left:-390px;
+    z-index:20;
+    width: 766px;
+    height: 561px;
+    background: #e9e5dc;
+    border: 7px solid white;
+    box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+} 
+
+.modal-content-close { /*крестик закрытия окна формы*/
+    position: absolute;
+    top:0;
+    right: -34px;    
+    width: 22px;
+    height: 22px;    
+    font-size: 0;    
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    background: transparent;
+}
+
+.modal-content-close::before,
+.modal-content-close::after {
+    content: "";
+    position: absolute;
+    top:9px;
+    left:1px;    
+    width: 19px;
+    height: 3px;
+    background-color: #d0d0d0;
+    border-radius: 1px;
+}
+
+.modal-content-close::before {
+    transform: rotate(45deg);
+}
+
+.modal-content-close::after {
+    transform: rotate(-45deg);
+}
+
+.modal-content h2,
+.modal-content-feedback h2
+{
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.modal-content p,
+.modal-content-feedback p
+{
+    margin: 0;
+    margin-bottom: 10px;    
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.email-form input[type="text"],
+.email-form .textarea
+{
+    width: 236px;
+    margin:0;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    padding-right: 40px;    
+    font-size: 14px;
+    line-height: 24px;
+    font-family: "PT Sans Narrow", "Arial", sans-serif;
+    color:#000000;
+    text-transform: uppercase;
+    border: 2px solid #000000;
+    outline:none;
+}
+
+.login-form input:focus {
+    border-color: #663d15;
+}
+
+.login-form .restore {
+    float:right;
+    color: #000000;
+   margin-top: 6px;
+}
+
+.modal-overlay {  /*затемнение фона при всплывании окна*/
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:10;    
+    width: 100%;
+    height: 100%;    
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-overlay-show {
+    display: block;
+}
+
+.modal-content-show { /*показать окно формы*/
+    display: block;
+
+}
+
+
+
+
+
+/*FORM end*/
