@@ -62,7 +62,7 @@ img { /*автосохранение пропорций картинок*/
 
 .main-navigation ul {
     margin: 0;
-    padding: 0;
+    padding: 15px 0 0 0;
     list-style: none;
 }
 
@@ -340,6 +340,11 @@ input[type="radio"]:checked + label span {
     margin-bottom:25px; 
 }
 
+.index-content-right .index-content-title {
+    margin-top:-15px;
+    margin-bottom:30px; 
+}
+
 .index-content p {
     margin:0;
     margin-bottom:25px; 
@@ -391,11 +396,45 @@ input[type="radio"]:checked + label span {
     height: 164px;    
 }
 
+#next, #prev {
+    position: relative;
+    width: 289px;
+    padding-top:15px;
+}
+        
+.slider-inner {
+    width: 100%;
+    overflow: hidden;   
+}
+
+
+.slider-slides {    
+    width: 200%;
+    transition: transform 0.2s ease;
+}
+
+.slider-slides img {
+    float: left;
+    width: 286px;
+    height: 165px;  
+        
+}
+
+#next:target .slider-slides {    
+    transform:translate(-286px);
+}
+
+#prev:target .slider-slides {    
+    transform:translate(0);
+}
+
+
 .gallery .btn {
-    position: absolute;
-    bottom:0; 
+    position: absolute;    
+    bottom:-62px; 
     width: 140px;
     margin:0;
+   
 }
 
 .gallery-prev {
